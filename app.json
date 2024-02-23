@@ -1,22 +1,43 @@
-{
-  "name": "Careerwill Ban Bypass-Deployer",
-  "description": "With this you can deploy Repos that are banned/blacklisted by Heroku.",
-  "keywords": [
-    "telegram",
-    "open",
-    "source",
-    "multi",
-    "purpose",
-    "remote",
-    "deployer"
-  ],
-  "env": {
-    "BOT_TOKEN": {
-     "description": "Your Bot token from @Botfather"
-       },
-     "API_ID": {
 
-        "description": "Your API_ID from https://my.telegram.org/apps"
+{
+
+    "name": "Unkniwntxt",
+
+    "description": "Download videos from various websites using this telegram bot",
+
+    "repository": "https://github.com/Martyy2003/Unkniwntxt",
+    "buildpacks":[
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "https://github.com/amivin/aria2-heroku.git"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "keywords": [
+
+       
+
+        "telegram bot",
+
+        "pyrogram"
+
+    ],
+
+    "env": {
+
+        "BOT_TOKEN": {
+
+            "description": "Your Bot token from @Botfather"
+
+        },
+
+        "API_ID": {
+
+            "description": "Your API_ID from https://my.telegram.org/apps"
 
         },
 
@@ -25,21 +46,20 @@
             "description": "Your API_HASH from https://my.telegram.org/apps"
 
         }
-},
-  "addons": [
-  ],
-  "buildpacks": [
-  {
-    "url": "heroku/python"
-  },
-   {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    }
-],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
+
+    },
+
+    "buildpacks": [
+
+        {
+
+            "url": "heroku/python"
+
+        },
+       {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+       }
+       
+    ]
+
 }
